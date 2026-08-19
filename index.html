@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>All Tool Raja – Free Online Calculators & Tools</title>
+  <meta name="description" content="All Tool Raja: free online calculators, converters, and tools for finance, math, health, date & time, and more. Fast, mobile-friendly, and accurate." />
+  <link rel="canonical" href="https://alltoolraja.com/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="All Tool Raja – Free Online Calculators & Tools" />
+  <meta property="og:description" content="Calculate, convert, generate and solve everyday problems quickly with All Tool Raja." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alltoolraja.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="All Tool Raja – Free Online Calculators & Tools" />
+  <meta name="twitter:description" content="Calculate, convert, generate and solve everyday problems quickly with All Tool Raja." />
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; }
+    body { background: #f9fafc; color: #1e293b; line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+    img, svg { display: block; max-width: 100%; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.25rem; }
+    /* header */
+    header { background: #ffffff; box-shadow: 0 2px 12px rgba(0,0,0,0.04); position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0.7rem 0; }
+    .logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.8rem; font-weight: 700; color: #0b3b5c; }
+    .logo i { color: #2a7faa; font-size: 2rem; }
+    .nav-desktop { display: flex; gap: 2rem; font-weight: 500; }
+    .nav-desktop a { color: #1e293b; transition: 0.2s; }
+    .nav-desktop a:hover { color: #2a7faa; }
+    .header-search { display: flex; align-items: center; background: #f1f5f9; border-radius: 40px; padding: 0.3rem 0.8rem; }
+    .header-search input { border: none; background: transparent; padding: 0.4rem 0.6rem; outline: none; font-size: 0.9rem; width: 160px; }
+    .header-search i { color: #64748b; }
+    .hamburger { display: none; font-size: 1.6rem; cursor: pointer; color: #0b3b5c; }
+    .mobile-menu { display: none; flex-direction: column; background: white; padding: 1rem 0; border-top: 1px solid #e2e8f0; }
+    .mobile-menu a { padding: 0.6rem 1.25rem; font-weight: 500; }
+    .mobile-menu a:hover { background: #f1f5f9; }
+
+    /* hero */
+    .hero { background: linear-gradient(145deg, #eef6ff, #ffffff); padding: 3.5rem 0; border-radius: 0 0 3rem 3rem; margin-bottom: 2.5rem; }
+    .hero-content { max-width: 780px; margin: 0 auto; text-align: center; }
+    .hero h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); font-weight: 700; color: #0b3b5c; letter-spacing: -0.02em; }
+    .hero p { font-size: 1.25rem; color: #334155; margin: 1rem 0 2rem; }
+    .hero-search { display: flex; background: white; border-radius: 60px; padding: 0.2rem 0.2rem 0.2rem 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.04); max-width: 600px; margin: 0 auto; }
+    .hero-search input { flex: 1; border: none; padding: 0.9rem 0; font-size: 1rem; outline: none; background: transparent; }
+    .hero-search button { background: #2a7faa; color: white; border: none; padding: 0.7rem 2rem; border-radius: 40px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .hero-search button:hover { background: #1e5f7e; }
+
+    /* section titles */
+    .section-title { font-size: 2rem; font-weight: 700; color: #0b3b5c; margin-bottom: 1.8rem; letter-spacing: -0.01em; }
+    .section-sub { color: #475569; margin-bottom: 2rem; }
+
+    /* tool cards */
+    .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.8rem; }
+    .tool-card { background: white; border-radius: 1.5rem; padding: 1.5rem 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); border: 1px solid #eef2f6; transition: 0.2s; display: flex; flex-direction: column; }
+    .tool-card:hover { border-color: #cbd5e1; box-shadow: 0 8px 20px rgba(0,0,0,0.02); }
+    .tool-card i { font-size: 2.2rem; color: #2a7faa; margin-bottom: 0.6rem; }
+    .tool-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .tool-card p { font-size: 0.9rem; color: #475569; flex: 1; }
+    .tool-card .btn { margin-top: 1rem; background: #eef6ff; color: #1e5f7e; border: none; padding: 0.5rem 0; border-radius: 40px; font-weight: 600; cursor: pointer; transition: 0.2s; text-align: center; }
+    .tool-card .btn:hover { background: #2a7faa; color: white; }
+
+    /* categories */
+    .category-section { margin: 3.5rem 0; }
+    .category-group { background: white; border-radius: 2rem; padding: 1.8rem; box-shadow: 0 2px 8px rgba(0,0,0,0.02); border: 1px solid #eef2f6; margin-bottom: 2rem; }
+    .category-group h3 { font-size: 1.5rem; color: #0b3b5c; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.7rem; }
+    .category-group h3 i { color: #2a7faa; }
+    .cat-links { display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem; }
+    .cat-links a { background: #f8fafc; padding: 0.3rem 1.2rem; border-radius: 40px; font-size: 0.95rem; border: 1px solid #e9edf2; transition: 0.2s; }
+    .cat-links a:hover { background: #2a7faa; color: white; border-color: #2a7faa; }
+
+    .view-all { text-align: center; margin: 2rem 0 1rem; }
+    .view-all a { background: #0b3b5c; color: white; padding: 0.8rem 2.8rem; border-radius: 60px; font-weight: 600; display: inline-block; transition: 0.2s; }
+    .view-all a:hover { background: #1e5f7e; }
+
+    /* footer */
+    footer { background: #0b1e2b; color: #e2e8f0; padding: 3rem 0 1.5rem; margin-top: 3rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 2.5rem; }
+    .footer-grid h4 { color: white; font-size: 1.1rem; margin-bottom: 1.2rem; }
+    .footer-grid a { display: block; color: #b9c7d4; margin: 0.3rem 0; font-size: 0.95rem; }
+    .footer-grid a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid #2d4050; margin-top: 2.5rem; padding-top: 1.5rem; text-align: center; font-size: 0.9rem; color: #94a3b8; }
+
+    /* Ad placeholders */
+    .ad-slot { background: #f1f5f9; border-radius: 1.5rem; padding: 2rem 1rem; text-align: center; color: #64748b; font-size: 0.9rem; margin: 2rem 0; border: 1px dashed #cbd5e1; }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .nav-desktop, .header-search { display: none; }
+      .hamburger { display: block; }
+      .mobile-menu.open { display: flex; }
+      .header-inner { flex-wrap: wrap; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 2.5rem 0; }
+      .hero-search { flex-wrap: wrap; background: transparent; box-shadow: none; padding: 0; }
+      .hero-search input { width: 100%; border-radius: 60px; background: white; padding: 0.9rem 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+      .hero-search button { width: 100%; margin-top: 0.7rem; padding: 0.9rem; }
+      .tool-grid { grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); }
+    }
+
+    /* utility */
+    .mt-2 { margin-top: 2rem; }
+    .mb-2 { margin-bottom: 2rem; }
+    .flex-center { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo"><i class="fas fa-calculator"></i> All Tool Raja</div>
+      <nav class="nav-desktop">
+        <a href="#">Home</a>
+        <a href="#">All Tools</a>
+        <a href="#">Categories</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="header-search"><i class="fas fa-search"></i><input type="text" placeholder="Search tools..." id="globalSearch" /></div>
+      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Home</a><a href="#">All Tools</a><a href="#">Categories</a><a href="#">About</a><a href="#">Contact</a>
+      <div style="padding: 0.6rem 1.25rem;"><input type="text" placeholder="Search..." style="width:100%;padding:0.6rem;border-radius:40px;border:1px solid #e2e8f0;" id="mobileSearch" /></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Free Online Calculators &amp; Tools</h1>
+        <p>Calculate, convert, generate and solve everyday problems quickly with All Tool Raja.</p>
+        <div class="hero-search">
+          <input type="text" placeholder="Search for a calculator or tool..." id="heroSearch" />
+          <button><i class="fas fa-search"></i> Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Tools -->
+    <div class="container">
+      <h2 class="section-title">🔥 Featured Tools</h2>
+      <div class="tool-grid" id="featuredGrid">
+        <!-- Cards will be injected by JS -->
+      </div>
+    </div>
+
+    <!-- Ad slot -->
+    <div class="container ad-slot"><i class="fas fa-ad"></i> Advertisement placeholder – 728x90</div>
+
+    <!-- Categories -->
+    <div class="container category-section">
+      <h2 class="section-title">📂 Tool Categories</h2>
+      <div id="categoryContainer"></div>
+      <div class="view-all"><a href="#">View All Tools →</a></div>
+    </div>
+
+    <!-- Ad slot 2 -->
+    <div class="container ad-slot"><i class="fas fa-ad"></i> Advertisement placeholder – responsive</div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4><i class="fas fa-calculator"></i> All Tool Raja</h4><p style="color:#b9c7d4;margin-top:0.5rem;">Free online calculators, converters and useful tools for everyday needs.</p></div>
+        <div><h4>Popular Tools</h4><a href="#">Age Calculator</a><a href="#">BMI Calculator</a><a href="#">EMI Calculator</a><a href="#">Percentage Calculator</a><a href="#">GST Calculator</a></div>
+        <div><h4>Categories</h4><a href="#">Finance</a><a href="#">Math</a><a href="#">Health</a><a href="#">Date &amp; Time</a><a href="#">Converters</a></div>
+        <div><h4>Company</h4><a href="#">About Us</a><a href="#">Contact</a><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Disclaimer</a></div>
+      </div>
+      <div class="footer-bottom">© 2026 All Tool Raja. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      // Tool dataset (50+ tools)
+      const tools = [
+        { name: "Age Calculator", category: "Date & Time", desc: "Calculate exact age in years, months, days.", icon: "fas fa-calendar-alt" },
+        { name: "BMI Calculator", category: "Health", desc: "Body Mass Index based on height and weight.", icon: "fas fa-weight" },
+        { name: "Percentage Calculator", category: "Math", desc: "Find percentage, increase, decrease.", icon: "fas fa-percent" },
+        { name: "Loan Calculator", category: "Finance", desc: "Estimate monthly loan payments.", icon: "fas fa-hand-holding-usd" },
+        { name: "EMI Calculator", category: "Finance", desc: "Equated Monthly Installment for loans.", icon: "fas fa-coins" },
+        { name: "GST Calculator", category: "Finance", desc: "Calculate GST amounts easily.", icon: "fas fa-receipt" },
+        { name: "Date Calculator", category: "Date & Time", desc: "Add or subtract days from a date.", icon: "fas fa-calendar-day" },
+        { name: "Time Calculator", category: "Date & Time", desc: "Add or subtract time durations.", icon: "fas fa-clock" },
+        { name: "Scientific Calculator", category: "Math", desc: "Advanced mathematical functions.", icon: "fas fa-square-root-variable" },
+        { name: "Discount Calculator", category: "Finance", desc: "Find discounted price and savings.", icon: "fas fa-tags" },
+        { name: "Compound Interest Calculator", category: "Finance", desc: "Compound interest with contributions.", icon: "fas fa-chart-line" },
+        { name: "Currency Converter", category: "Converters", desc: "Live exchange rate conversion.", icon: "fas fa-dollar-sign" },
+        { name: "Mortgage Calculator", category: "Finance", desc: "Monthly mortgage payment estimator.", icon: "fas fa-house" },
+        { name: "Interest Calculator", category: "Finance", desc: "Simple interest calculation.", icon: "fas fa-percent" },
+        { name: "Income Tax Calculator", category: "Finance", desc: "Estimate income tax liability.", icon: "fas fa-file-invoice-dollar" },
+        { name: "Salary Calculator", category: "Finance", desc: "Annual to hourly salary conversion.", icon: "fas fa-money-bill-wave" },
+        { name: "Investment Calculator", category: "Finance", desc: "Project investment growth.", icon: "fas fa-chart-pie" },
+        { name: "SIP Calculator", category: "Finance", desc: "Systematic Investment Plan returns.", icon: "fas fa-piggy-bank" },
+        { name: "FD Calculator", category: "Finance", desc: "Fixed Deposit maturity amount.", icon: "fas fa-bank" },
+        { name: "RD Calculator", category: "Finance", desc: "Recurring Deposit maturity.", icon: "fas fa-hand-holding-heart" },
+        { name: "Fraction Calculator", category: "Math", desc: "Add, subtract, multiply fractions.", icon: "fas fa-divide" },
+        { name: "Ratio Calculator", category: "Math", desc: "Simplify and compare ratios.", icon: "fas fa-arrows-left-right" },
+        { name: "Average Calculator", category: "Math", desc: "Mean, median, mode calculator.", icon: "fas fa-calculator" },
+        { name: "Random Number Generator", category: "Math", desc: "Generate random integers or decimals.", icon: "fas fa-dice" },
+        { name: "Triangle Calculator", category: "Math", desc: "Solve triangle sides and angles.", icon: "fas fa-shapes" },
+        { name: "Area Calculator", category: "Math", desc: "Area of shapes: square, circle, etc.", icon: "fas fa-ruler-combined" },
+        { name: "Volume Calculator", category: "Math", desc: "Volume of cubes, cylinders, spheres.", icon: "fas fa-cube" },
+        { name: "Standard Deviation Calculator", category: "Math", desc: "Population & sample SD.", icon: "fas fa-chart-bar" },
+        { name: "Exponent Calculator", category: "Math", desc: "Power and exponent calculations.", icon: "fas fa-superscript" },
+        { name: "Square Root Calculator", category: "Math", desc: "Find square roots quickly.", icon: "fas fa-square-root-variable" },
+        { name: "BMR Calculator", category: "Health", desc: "Basal Metabolic Rate estimation.", icon: "fas fa-heart-pulse" },
+        { name: "Calorie Calculator", category: "Health", desc: "Daily calorie needs based on activity.", icon: "fas fa-fire" },
+        { name: "Body Fat Calculator", category: "Health", desc: "Estimate body fat percentage.", icon: "fas fa-person" },
+        { name: "Ideal Weight Calculator", category: "Health", desc: "Ideal body weight for height.", icon: "fas fa-weight-scale" },
+        { name: "Pace Calculator", category: "Health", desc: "Running pace and speed.", icon: "fas fa-running" },
+        { name: "Water Intake Calculator", category: "Health", desc: "Daily water intake recommendation.", icon: "fas fa-droplet" },
+        { name: "Pregnancy Calculator", category: "Health", desc: "Due date and gestational age.", icon: "fas fa-baby" },
+        { name: "Date Difference Calculator", category: "Date & Time", desc: "Days between two dates.", icon: "fas fa-calendar-days" },
+        { name: "Hours Calculator", category: "Date & Time", desc: "Total hours between times.", icon: "fas fa-clock" },
+        { name: "Countdown Timer", category: "Date & Time", desc: "Countdown to a future date.", icon: "fas fa-hourglass-half" },
+        { name: "Business Days Calculator", category: "Date & Time", desc: "Working days between dates.", icon: "fas fa-briefcase" },
+        { name: "Days Between Dates", category: "Date & Time", desc: "Exact days between two dates.", icon: "fas fa-calendar-week" },
+        { name: "Length Converter", category: "Converters", desc: "Meters, feet, inches, yards, miles.", icon: "fas fa-ruler" },
+        { name: "Weight Converter", category: "Converters", desc: "Kg, lbs, oz, stones, tons.", icon: "fas fa-weight-hanging" },
+        { name: "Temperature Converter", category: "Converters", desc: "Celsius, Fahrenheit, Kelvin.", icon: "fas fa-temperature-high" },
+        { name: "Speed Converter", category: "Converters", desc: "Km/h, mph, knots, m/s.", icon: "fas fa-gauge-high" },
+        { name: "Area Converter", category: "Converters", desc: "Square meters, acres, hectares.", icon: "fas fa-vector-square" },
+        { name: "Volume Converter", category: "Converters", desc: "Liters, gallons, cubic meters.", icon: "fas fa-flask" },
+        { name: "Data Storage Converter", category: "Converters", desc: "Bytes, KB, MB, GB, TB.", icon: "fas fa-database" },
+        { name: "Time Zone Converter", category: "Converters", desc: "Convert between time zones.", icon: "fas fa-globe" },
+        { name: "Password Generator", category: "Generators", desc: "Strong random passwords.", icon: "fas fa-key" },
+        { name: "QR Code Generator", category: "Generators", desc: "Generate QR codes from text/URL.", icon: "fas fa-qrcode" },
+        { name: "Word Counter", category: "Text", desc: "Count words, characters, sentences.", icon: "fas fa-file-word" },
+        { name: "Character Counter", category: "Text", desc: "Count characters with/without spaces.", icon: "fas fa-font" },
+        { name: "Text Case Converter", category: "Text", desc: "Uppercase, lowercase, title case.", icon: "fas fa-text-height" },
+        { name: "Image Compressor", category: "Other", desc: "Compress images (placeholder).", icon: "fas fa-image" },
+        { name: "Unit Converter", category: "Converters", desc: "General unit conversion.", icon: "fas fa-arrows-spin" }
+      ];
+
+      // Render featured (first 12)
+      const featured = tools.slice(0,12);
+      const grid = document.getElementById('featuredGrid');
+      if(grid) {
+        grid.innerHTML = featured.map(t => `
+          <div class="tool-card">
+            <i class="${t.icon}"></i>
+            <h3>${t.name}</h3>
+            <p>${t.desc}</p>
+            <span class="btn">Use Tool</span>
+          </div>
+        `).join('');
+      }
+
+      // Render categories
+      const catContainer = document.getElementById('categoryContainer');
+      if(catContainer) {
+        const catMap = {};
+        tools.forEach(t => {
+          if(!catMap[t.category]) catMap[t.category] = [];
+          catMap[t.category].push(t.name);
+        });
+        let html = '';
+        for(const [cat, names] of Object.entries(catMap)) {
+          html += `<div class="category-group"><h3><i class="fas fa-folder-open"></i> ${cat}</h3><div class="cat-links">`;
+          names.forEach(n => html += `<a href="#">${n}</a>`);
+          html += `</div></div>`;
+        }
+        catContainer.innerHTML = html;
+      }
+
+      // Search (simple client-side filter)
+      function searchTools(query) {
+        if(!query) return;
+        const q = query.toLowerCase().trim();
+        const results = tools.filter(t => t.name.toLowerCase().includes(q) || t.category.toLowerCase().includes(q));
+        if(results.length) {
+          const names = results.slice(0,8).map(t => t.name).join(', ');
+          alert(`🔍 Found tools: ${names}\n(Full search would show tool cards)`);
+        } else {
+          alert('No tools found. Try "calculator", "loan", "BMI"');
+        }
+      }
+
+      const heroSearchBtn = document.querySelector('.hero-search button');
+      const heroSearchInput = document.getElementById('heroSearch');
+      if(heroSearchBtn && heroSearchInput) {
+        heroSearchBtn.addEventListener('click', (e) => { e.preventDefault(); searchTools(heroSearchInput.value); });
+        heroSearchInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') { e.preventDefault(); searchTools(heroSearchInput.value); } });
+      }
+      const globalSearch = document.getElementById('globalSearch');
+      if(globalSearch) {
+        globalSearch.addEventListener('keypress', (e) => { if(e.key === 'Enter') { e.preventDefault(); searchTools(globalSearch.value); } });
+      }
+      const mobileSearch = document.getElementById('mobileSearch');
+      if(mobileSearch) {
+        mobileSearch.addEventListener('keypress', (e) => { if(e.key === 'Enter') { e.preventDefault(); searchTools(mobileSearch.value); } });
+      }
+
+      // Hamburger
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if(hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+      }
+
+      // Card click simulation
+      document.querySelectorAll('.tool-card .btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const name = this.closest('.tool-card').querySelector('h3')?.innerText || 'Tool';
+          alert(`🔧 ${name} – calculator interface would open.\n(Full version includes input fields, calculate, reset, results)`);
+        });
+      });
+
+      // Category links
+      document.querySelectorAll('.cat-links a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert(`📂 Showing tools in category: ${link.textContent} (filter would apply)`);
+        });
+      });
+
+      console.log('All Tool Raja – ready');
+    })();
+  </script>
+</body>
+</html>
